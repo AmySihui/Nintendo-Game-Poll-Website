@@ -1,0 +1,76 @@
+/* logo */
+.navbar-brand img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+/* nav */
+.navbar-nav .nav-link {
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    border-bottom: 0 !important;
+    box-shadow: none !important;
+  }
+
+/* page */
+body {
+    background-color: rgb(6, 9, 6);
+    color: white;
+    padding-top: 50px
+}
+
+/* video and title */
+.background-container {
+    margin-top: 80px;
+    height: 650px;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50%;
+    height: auto;
+    transform: translateY(-50%);
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    #bvideo {
+      display: none;
+    }
+  }
+
+.content {
+    margin-left: 100px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    color: white;
+    text-align: left;
+    z-index: 1;
+}
+
+.content h1 {
+    margin-top: 30px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(242, 163, 102)
+}
+
+.content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #d3d3d3;
+}
+
