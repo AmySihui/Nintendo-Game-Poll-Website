@@ -2,40 +2,40 @@ $(document).ready(function () {
     // 新闻数据
     const newsData = [
         {
-            title: "Exciting New Game Released",
+            title: "Book IX Begins Celebration kicks off in Fire Emblem Heroes",
             description: "Discover the latest game from Nintendo with thrilling adventures.",
-            image: "assets/images/news1.jpg",
-            link: "news-details1.html"
+            image: "assets/images/news1.avif",
+            link: "https://www.nintendo.com/us/whatsnew/mobilenews-book-ix-begins-celebration-kicks-off-in-fire-emblem-heroes/"
         },
         {
-            title: "Nintendo Direct Highlights",
+            title: "Ask the Developer Vol. 15, Mario & Luigi: Brothership — Part 3",
             description: "Catch up on the announcements from the latest Nintendo Direct event.",
-            image: "assets/images/news2.jpg",
-            link: "news-details2.html"
+            image: "assets/images/news2.avif",
+            link: "https://www.nintendo.com/us/whatsnew/ask-the-developer-vol-15-mario-and-luigi-brothership-part-3/"
         },
         {
-            title: "Upcoming Game Previews",
+            title: "Fitness Boxing 3: Your Personal Trainer is out now!",
             description: "Get a sneak peek at the most anticipated games.",
-            image: "assets/images/news3.jpg",
-            link: "news-details3.html"
+            image: "assets/images/news3.avif",
+            link: "https://www.nintendo.com/us/whatsnew/fitness-boxing-3-your-personal-trainer-is-out-now/"
         },
         {
-            title: "Big Game Update Released",
+            title: "New update! See the latest bunch of classic games added to the Game Boy library",
             description: "Explore new features in your favorite games with this update.",
-            image: "assets/images/news4.jpg",
-            link: "news-details4.html"
+            image: "assets/images/news4.avif",
+            link: "https://www.nintendo.com/us/whatsnew/new-update-see-the-latest-bunch-of-classic-games-added-to-the-game-boy-library/"
         },
         {
-            title: "Behind the Scenes: Game Development",
+            title: "Animal Crossing: Pocket Camp Complete is now available!",
             description: "Learn how developers create stunning worlds and gameplay.",
-            image: "assets/images/news5.jpg",
+            image: "assets/images/news5.avif",
             link: "news-details5.html"
         },
         {
             title: "Community Spotlight",
             description: "See what the Nintendo community is creating and discussing.",
-            image: "assets/images/news6.jpg",
-            link: "news-details6.html"
+            image: "assets/images/news6.avif",
+            link: "https://www.nintendo.com/us/whatsnew/what-are-my-nintendo-gold-points-heres-how-to-redeem-them-for-discounts-on-digital-purchases/"
         }
     ];
 
@@ -66,4 +66,6 @@ $(document).ready(function () {
         `;
         newsContainer.append(card);
     });
+
+
 });

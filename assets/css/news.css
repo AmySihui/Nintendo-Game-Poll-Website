@@ -38,9 +38,9 @@
 }
 
 @keyframes text-glow {
-    0% { color: #ff6f61; text-shadow: 0 0 5px #ff6f61; }
-    50% { color: #ffcc00; text-shadow: 0 0 15px #ffcc00; }
-    100% { color: #6bc1ff; text-shadow: 0 0 20px #6bc1ff; }
+    0% { color: #e86c11; text-shadow: 0 0 5px #cdad0f; }
+    50% { color: #ef9205; text-shadow: 0 0 15px #f66105; }
+    100% { color: #d1e817; text-shadow: 0 0 20px #faed03; }
 }
 
 @keyframes float {
@@ -51,7 +51,7 @@
 
 /* 动态背景效果 */
 .scrolling-container {
-    background: linear-gradient(90deg, #ff6f61, #ffcc00, #6bc1ff, #ff6f61);
+    background: linear-gradient(90deg, #32329a, #56278a, #4a4aaf, #1b4085);
     background-size: 400% 400%;
     animation: gradient-animation 10s infinite;
     min-height: 100vh;
