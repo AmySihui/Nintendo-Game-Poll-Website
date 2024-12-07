@@ -1,10 +1,60 @@
-/* 动态背景 */
-body {
-    background: linear-gradient(to right, #2b1055, #7597de, #2b1055);
-    background-size: 600% 600%;
-    animation: gradient-animation 10s infinite;
-    font-family: Arial, sans-serif;
+/* 视频背景样式 */
+.video-header {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* 占二分之一高度 */
+    overflow: hidden;
+    background: #000;
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 动态文字动画 */
+.animated-text {
+    font-size: 3rem;
+    font-weight: bold;
     color: #ffffff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    animation: text-glow 3s infinite alternate ease-in-out, float 4s infinite ease-in-out;
+}
+
+@keyframes text-glow {
+    0% { color: #ff6f61; text-shadow: 0 0 5px #ff6f61; }
+    50% { color: #ffcc00; text-shadow: 0 0 15px #ffcc00; }
+    100% { color: #6bc1ff; text-shadow: 0 0 20px #6bc1ff; }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* 动态背景效果 */
+.scrolling-container {
+    background: linear-gradient(90deg, #ff6f61, #ffcc00, #6bc1ff, #ff6f61);
+    background-size: 400% 400%;
+    animation: gradient-animation 10s infinite;
+    min-height: 100vh;
 }
 
 @keyframes gradient-animation {
@@ -13,67 +63,52 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* 标题样式 */
-.section-title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
 /* 新闻卡片样式 */
 .news-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-.news-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-}
-
-/* 新闻图片 */
-.news-image {
+.news-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-/* 新闻内容 */
-.news-content {
-    padding: 20px;
-    text-align: center;
+.news-card:hover img {
+    transform: scale(1.1);
 }
 
-.news-title {
+.news-card .card-content {
+    padding: 15px;
+    color: #fff;
+}
+
+.news-card h5 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-    margin-bottom: 10px;
 }
 
-.news-description {
-    font-size: 1rem;
+.news-card p {
+    font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 15px;
 }
 
 /* 按钮样式 */
-.btn-gradient {
-    background: linear-gradient(to right, #8e44ad, #3498db);
-    color: #ffffff;
+.read-more-btn {
+    background: #3498db;
+    color: #fff;
     border: none;
-    border-radius: 50px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    transition: background 0.3s, box-shadow 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.btn-gradient:hover {
-    background: linear-gradient(to right, #3498db, #8e44ad);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+.read-more-btn:hover {
+    background: #1d6fa5;
 }
