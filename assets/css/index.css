@@ -1,0 +1,354 @@
+/* Overall */
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+/* navbar */
+.navbar-brand img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px 10px;
+    }
+
+    .navbar .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .navbar-brand img {
+        width: 40px;
+    }
+}
+
+.container-fluid {
+    display: flex;
+    align-items: center;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #111;
+}
+
+.navbar-logo{
+    flex: 1;
+    text-align: center;
+}
+
+.navbar-logo .logo{
+    height: 50px;
+    width: auto;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    flex:1;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.countdown{
+    font-size: 14px;
+}
+
+/* Video */
+.hero-video{
+    text-align: center;
+    margin-top:20px;
+}
+
+.hero-video video{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Content on the video */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 ; /* Center container */
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Floating content style */
+.hero-overlay {
+    position: absolute; 
+    top:50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; 
+    z-index: 10;
+}
+
+.hero-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-overlay .buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgba(255, 102, 0, 0.8);/*semi-transparent background color */
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.hero-overlay .buttons button:hover {
+    
+    background-color: rgba(255, 102, 0, 1); 
+
+}
+
+/*Mouse hover effect */
+/* hero */
+.hero{
+    position: relative;
+    text-align: center;
+    /* padding: 100px 20px; */
+    color: #fff;
+}
+
+.hero-content h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-content .buttons button{
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff6600;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.hero-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('hero-ground.jpg') no-repeat center center/cover;
+    z-index: -1;
+}
+/* Triangle Cover */
+.triangle-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    clip-path: polygon(0 0, 50% 100%,100% 0);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.triangle-content{
+    color:white;
+    z-index: 20;
+    position: relative;
+    top: -20px;
+    text-align: center;
+}
+
+.triangle-content h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.triangle-content p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.triangle-content .buttons button{
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgba(225, 102, 0, 0.8);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.triangle-content .buttons button:hover{
+    background-color: rgba(225, 102, 0, 1);
+}
+
+/* End */
+/* News Start */
+.news-section {
+    position: absolute;
+    padding: 20px;
+    text-align: center;
+}
+    
+.news-title {
+    font-size: 36px;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0;
+}
+
+.news-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom :20px;
+}
+    
+.news-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    flex: 1 1 calc(33.333% - 20px);
+    width: 450px;
+    height: 400px;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Some Animationd effect */
+.news-item:hover{
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+ .news-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+    display: block;
+}
+    
+.news-caption {
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    
+}
+    
+/* view All button */
+.view-all-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #FFA500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    
+.view-all-button:hover {
+    background-color: #e69500;
+}
+/* News End */
+/* backgroundImage Start */
+.bg{
+    text-align: center;
+    font-size: 64px;
+    font-weight: bolder;
+    height: 140px;
+    line-height: 140px;
+    background-color:#210000;
+}
+.image_1{
+    position: relative;
+    background-image: url(../images/index_background01.png);
+    background-position: 0 0;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 680px;
+    width: 100%;
+}
+.image_2{
+    background-image: url(../images/index_background02.png);
+    background-position: 0 0;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 680px;
+    width: 100%;
+}
+.image_3{
+    background-image: url(../images/index_background03.png);
+    background-position: 0 0;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 680px;
+    width: 100%;
+}
+.image_4{
+    background-image: url(../images/index_background01.png);
+    background-position: 0 0;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 680px;
+    width: 100%;
+}
+/* backgroundImage End */
