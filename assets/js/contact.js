@@ -1,12 +1,12 @@
 $(document).ready(function () {
-    // 表单提交逻辑
+    // Form submission logic
     $('#contactForm').on('submit', function (e) {
         e.preventDefault();
 
-        // 验证表单是否有效
+        // Validate form for correctness
         if (this.checkValidity()) {
             alert("Thank you for contacting us! We will get back to you soon.");
-            this.reset(); // 重置表单
+            this.reset(); // Reset the form
         } else {
             $(this).addClass('was-validated');
         }

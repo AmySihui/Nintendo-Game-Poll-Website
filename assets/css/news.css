@@ -1,8 +1,8 @@
-/* 视频背景样式 */
+/* Video background style */
 .video-header {
     position: relative;
     width: 100%;
-    height: 50vh; /* 占二分之一高度 */
+    height: 50vh; /* Occupies half the height */
     overflow: hidden;
     background: #000;
 }
@@ -28,7 +28,7 @@
     align-items: center;
 }
 
-/* 动态文字动画 */
+/* Dynamic text animation */
 .animated-text {
     font-size: 3rem;
     font-weight: bold;
@@ -49,7 +49,8 @@
     100% { transform: translateY(0); }
 }
 
-/* 动态背景效果 */
+
+/* Dynamic background effect */
 .scrolling-container {
     background: linear-gradient(90deg, #32329a, #052150, #040422, #1148ac);
     background-size: 400% 400%;
@@ -63,7 +64,7 @@
     100% { background-position: 0% 50%; }
 }
 
-/* 新闻卡片样式 */
+/* News card style */
 .news-card {
     position: relative;
     overflow: hidden;
@@ -100,7 +101,7 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* 按钮样式 */
+/* Button style */
 .read-more-btn {
     background: #3498db;
     color: #fff;
@@ -121,11 +122,11 @@
     transition: 0.3s ease-in-out;
 }
 
-/* 改变 Latest News 标题的字体颜色 */
+/* Change font color of the Latest News title */
 .section-title {
-    color: rgba(239, 107, 11, 0.87); /* 设置字体颜色为橙色 */
-    font-size: 2.5rem; /* 设置字体大小 */
-    font-weight: bold; /* 设置字体加粗 */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* 增加文本阴影效果 */
-    text-align: center; /* 居中对齐 */
+    color: rgb(216, 164, 133); /* Set font color to orange */
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }

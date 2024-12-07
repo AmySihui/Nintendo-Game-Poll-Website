@@ -1,4 +1,4 @@
-/* 动态背景 */
+/* Dynamic background */
 body {
     background: linear-gradient(to right, purple, black, red, blue);
     background-size: 600% 600%;
@@ -21,7 +21,7 @@ body {
     }
 }
 
-/* 标题样式 */
+/* Title styles */
 .section-title {
     font-size: 2.5rem;
     font-weight: bold;
@@ -30,7 +30,7 @@ body {
     text-align: center;
 }
 
-/* 输入框标题 */
+/* Input field title styles */
 .input-title {
     font-weight: bold;
     color: #ffffff;
@@ -38,108 +38,103 @@ body {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-/* 毛玻璃效果 */
+
+/* Frosted glass effect */
 .glass-card {
     background: rgba(255, 255, 255, 0.2);
-    /* 调低透明度 */
+    /* Reduced opacity */
     border-radius: 8px;
     padding: 20px;
     backdrop-filter: blur(12px);
-    /* 轻微模糊效果 */
+    /* Slight blur effect */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     height: 100%;
 }
 
-/* 输入框样式 */
+/* Input field styles */
 .input-box {
     background: rgba(50, 50, 50, 0.4);
-    /* 半透明背景，与毛玻璃一致 */
+    /* Semi-transparent background matching frosted glass */
     color: #ffffff;
     border: none;
-    /* 移除边框 */
+    /* Remove border */
     border-radius: 5px;
     padding: 12px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
-    /* 内嵌阴影 */
+    /* Inset shadow */
 }
 
 .input-box:focus {
     outline: none;
-    /* 移除聚焦时的默认边框 */
+    /* Remove default focus border */
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    /* 聚焦时的柔和光效 */
+    /* Soft glow effect on focus */
 }
 
 .input-box::placeholder {
     color: rgba(255, 255, 255, 0.7);
-    /* 调整占位符颜色为更柔和的白色 */
 }
 
-/* 按钮样式 */
+/* Button styles */
 .btn-gradient {
     background: rgba(255, 255, 255, 0.2);
-    /* 与毛玻璃背景一致 */
     color: white;
     border: none;
-    /* 去掉显眼边框 */
     border-radius: 8px;
-    /* 圆角矩形 */
     font-size: 1.2rem;
     padding: 12px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -2px 4px rgba(255, 255, 255, 0.2);
-    /* 内嵌和外部阴影结合 */
     transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
+/*hover*/
 .btn-gradient:hover {
     transform: scale(1.05);
     background: rgba(255, 255, 255, 0.3);
-    /* 悬停时背景稍亮 */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4), inset 0 -3px 6px rgba(255, 255, 255, 0.3);
-    /* 悬停时增加阴影深度 */
 }
 
 .login-icon a {
-    display: inline-flex; /* 让图标和文字水平排列 */
-    align-items: center; /* 垂直居中 */
+    display: inline-flex;
+    align-items: center;
     background: linear-gradient(to right, #8e44ad, #3498db) !important; /* 渐变背景色 */
-    color: white !important; /* 强制文字颜色为白色 */
-    border: none !important; /* 移除边框 */
-    border-radius: 50px !important; /* 圆角样式 */
-    padding: 10px 20px !important; /* 增加点击区域 */
-    text-decoration: none !important; /* 移除下划线 */
-    font-size: 1rem !important; /* 字体大小 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加平滑效果 */
+    color: white !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 10px 20px !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .login-icon a:hover {
-    transform: scale(1.05) !important; /* 鼠标悬停放大效果 */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important; /* 增加悬停阴影 */
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* 让导航栏完全透明 */
+/* Make the navbar fully transparent */
 .navbar {
-    background-color: transparent !important; /* 设置背景透明 */
-    border: none !important; /* 移除边框 */
-    box-shadow: none !important; /* 去掉阴影 */
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-/* Bootstrap 默认的 `bg-dark` 类覆盖处理 */
+/* Override Bootstrap's default `bg-dark` class */
 .bg-dark {
-    background-color: transparent !important; /* 覆盖默认深色背景 */
+    background-color: transparent !important;
 }
 
-/* 确保导航链接样式正确 */
+/* Ensure navigation link styles are correct */
 .navbar-nav .nav-link {
-    color: white !important; /* 强制文字颜色为白色 */
-    font-weight: bold; /* 字体加粗 */
-    text-decoration: none; /* 去掉下划线 */
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none;
     padding: 10px 15px;
 }
 
-/* logo 样式保持透明 */
+/* Maintain transparent style for the logo */
 .navbar-brand img {
     width: 50px;
-    border-radius: 50%; /* 圆形 logo */
+    border-radius: 50%;
     background: transparent;
 }

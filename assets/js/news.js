@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // 新闻数据
+    // News data
     const newsData = [
         {
             title: "Book IX Begins Celebration kicks off in Fire Emblem Heroes",
@@ -62,18 +62,18 @@ $(document).ready(function () {
 
     const newsContainer = $("#news-container");
 
-    // 动态生成新闻卡片
+    // Dynamically generate news cards
     newsData.forEach(news => {
         const card = `
             <div class="col-12">
                 <div class="row g-3 align-items-center news-card">
-                    <!-- 左侧图片 -->
+                    <!-- Left-side image -->
                     <div class="col-4">
                         <a href="${news.link}">
                             <img src="${news.image}" alt="${news.title}" class="img-fluid rounded">
                         </a>
                     </div>
-                    <!-- 右侧文字 -->
+                    <!-- Right-side text -->
                     <div class="col-8">
                         <div class="card-content">
                             <a href="${news.link}" class="text-decoration-none text-dark">
