@@ -51,7 +51,7 @@
 
 /* 动态背景效果 */
 .scrolling-container {
-    background: linear-gradient(90deg, #32329a, #56278a, #4a4aaf, #1b4085);
+    background: linear-gradient(90deg, #32329a, #052150, #040422, #1148ac);
     background-size: 400% 400%;
     animation: gradient-animation 10s infinite;
     min-height: 100vh;
@@ -69,7 +69,7 @@
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(229, 232, 237, 0.24);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -86,7 +86,7 @@
 
 .news-card .card-content {
     padding: 15px;
-    color: #fff;
+    color: #070707;
 }
 
 .news-card h5 {
@@ -113,3 +113,18 @@
     background: #1d6fa5;
 }
 
+.news-card:hover {
+    background: rgba(229, 233, 237, 0.24);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    transition: 0.3s ease-in-out;
+}
+
+/* 改变 Latest News 标题的字体颜色 */
+.section-title {
+    color: rgba(239, 107, 11, 0.87); /* 设置字体颜色为橙色 */
+    font-size: 2.5rem; /* 设置字体大小 */
+    font-weight: bold; /* 设置字体加粗 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* 增加文本阴影效果 */
+    text-align: center; /* 居中对齐 */
+}
