@@ -99,30 +99,23 @@ body {
     /* 悬停时增加阴影深度 */
 }
 
-/* 登录按钮样式 */
-.btn-login {
-    /* 新增: 登录按钮样式 */
-    background: linear-gradient(to right, #8e44ad, #3498db);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-decoration: none;
+.login-icon a {
+    display: inline-flex; /* 让图标和文字水平排列 */
+    align-items: center; /* 垂直居中 */
+    background: linear-gradient(to right, #8e44ad, #3498db) !important; /* 渐变背景色 */
+    color: white !important; /* 强制文字颜色为白色 */
+    border: none !important; /* 移除边框 */
+    border-radius: 50px !important; /* 圆角样式 */
+    padding: 10px 20px !important; /* 增加点击区域 */
+    text-decoration: none !important; /* 移除下划线 */
+    font-size: 1rem !important; /* 字体大小 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加平滑效果 */
 }
 
-.btn-login:hover {
-    /* 新增: 悬停时的按钮效果 */
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+.login-icon a:hover {
+    transform: scale(1.05) !important; /* 鼠标悬停放大效果 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important; /* 增加悬停阴影 */
 }
-
-
-
-
-
-
 
 /* 让导航栏完全透明 */
 .navbar {

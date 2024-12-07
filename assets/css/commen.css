@@ -74,3 +74,21 @@ body {
     color: #d3d3d3;
 }
 
+/* login */
+.login-icon a {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(to right, #8e44ad, #3498db) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 10px 20px !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-icon a:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
