@@ -44,15 +44,23 @@ $(document).ready(function () {
     // 动态生成新闻卡片
     newsData.forEach(news => {
         const card = `
-            <div class="col-md-4">
-                <div class="news-card">
-                    <a href="${news.link}">
-                        <img src="${news.image}" alt="${news.title}">
+            <div class="col-12">
+                <div class="row g-3 align-items-center news-card">
+                    <!-- 左侧图片 -->
+                    <div class="col-4">
+                        <a href="${news.link}">
+                            <img src="${news.image}" alt="${news.title}" class="img-fluid rounded">
+                        </a>
+                    </div>
+                    <!-- 右侧文字 -->
+                    <div class="col-8">
                         <div class="card-content">
-                            <h5>${news.title}</h5>
+                            <a href="${news.link}" class="text-decoration-none text-dark">
+                                <h5>${news.title}</h5>
+                            </a>
                             <p>${news.description}</p>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         `;
