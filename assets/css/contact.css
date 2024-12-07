@@ -8,9 +8,17 @@ body {
 }
 
 @keyframes gradient-animation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* 标题样式 */
@@ -32,52 +40,68 @@ body {
 
 /* 毛玻璃效果 */
 .glass-card {
-    background: rgba(255, 255, 255, 0.2); /* 调低透明度 */
+    background: rgba(255, 255, 255, 0.2);
+    /* 调低透明度 */
     border-radius: 8px;
     padding: 20px;
-    backdrop-filter: blur(12px); /* 轻微模糊效果 */
+    backdrop-filter: blur(12px);
+    /* 轻微模糊效果 */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     height: 100%;
 }
 
 /* 输入框样式 */
 .input-box {
-    background: rgba(50, 50, 50, 0.4); /* 半透明背景，与毛玻璃一致 */
+    background: rgba(50, 50, 50, 0.4);
+    /* 半透明背景，与毛玻璃一致 */
     color: #ffffff;
-    border: none; /* 移除边框 */
+    border: none;
+    /* 移除边框 */
     border-radius: 5px;
     padding: 12px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); /* 内嵌阴影 */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+    /* 内嵌阴影 */
 }
 
 .input-box:focus {
-    outline: none; /* 移除聚焦时的默认边框 */
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* 聚焦时的柔和光效 */
+    outline: none;
+    /* 移除聚焦时的默认边框 */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    /* 聚焦时的柔和光效 */
 }
 
 .input-box::placeholder {
-    color: rgba(255, 255, 255, 0.7); /* 调整占位符颜色为更柔和的白色 */
+    color: rgba(255, 255, 255, 0.7);
+    /* 调整占位符颜色为更柔和的白色 */
 }
 
 /* 按钮样式 */
 .btn-gradient {
-    background: rgba(255, 255, 255, 0.2); /* 与毛玻璃背景一致 */
+    background: rgba(255, 255, 255, 0.2);
+    /* 与毛玻璃背景一致 */
     color: white;
-    border: none; /* 去掉显眼边框 */
-    border-radius: 8px; /* 圆角矩形 */
+    border: none;
+    /* 去掉显眼边框 */
+    border-radius: 8px;
+    /* 圆角矩形 */
     font-size: 1.2rem;
     padding: 12px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -2px 4px rgba(255, 255, 255, 0.2); /* 内嵌和外部阴影结合 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -2px 4px rgba(255, 255, 255, 0.2);
+    /* 内嵌和外部阴影结合 */
     transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-gradient:hover {
     transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.3); /* 悬停时背景稍亮 */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4), inset 0 -3px 6px rgba(255, 255, 255, 0.3); /* 悬停时增加阴影深度 */
+    background: rgba(255, 255, 255, 0.3);
+    /* 悬停时背景稍亮 */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4), inset 0 -3px 6px rgba(255, 255, 255, 0.3);
+    /* 悬停时增加阴影深度 */
 }
+
 /* 登录按钮样式 */
-.btn-login { /* 新增: 登录按钮样式 */
+.btn-login {
+    /* 新增: 登录按钮样式 */
     background: linear-gradient(to right, #8e44ad, #3498db);
     color: white;
     border: none;
@@ -88,7 +112,41 @@ body {
     text-decoration: none;
 }
 
-.btn-login:hover { /* 新增: 悬停时的按钮效果 */
+.btn-login:hover {
+    /* 新增: 悬停时的按钮效果 */
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+/* 让导航栏完全透明 */
+.navbar {
+    background-color: transparent !important; /* 设置背景透明 */
+    border: none !important; /* 移除边框 */
+    box-shadow: none !important; /* 去掉阴影 */
+}
+
+/* Bootstrap 默认的 `bg-dark` 类覆盖处理 */
+.bg-dark {
+    background-color: transparent !important; /* 覆盖默认深色背景 */
+}
+
+/* 确保导航链接样式正确 */
+.navbar-nav .nav-link {
+    color: white !important; /* 强制文字颜色为白色 */
+    font-weight: bold; /* 字体加粗 */
+    text-decoration: none; /* 去掉下划线 */
+    padding: 10px 15px;
+}
+
+/* logo 样式保持透明 */
+.navbar-brand img {
+    width: 50px;
+    border-radius: 50%; /* 圆形 logo */
+    background: transparent;
 }
