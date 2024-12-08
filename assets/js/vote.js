@@ -1,14 +1,47 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const voteButtons = document.querySelectorAll(".vote-btn");
-    const confirmation = document.querySelector(".vote-confirmation");
+const cards = document.querySelectorAll('.card');
+const voteButtons = document.querySelectorAll('.vote-button');
 
-    voteButtons.forEach((button) => {
-        button.addEventListener("click", (event) => {
-            const gameName = event.target
-                .closest(".card")
-                .querySelector("h2").innerText;
-            confirmation.querySelector("strong").innerText = gameName;
-            confirmation.style.display = "block";
-        });
-    });
+window.addEventListener('load', () => {
+  const savedVotes = JSON.parse(localStorage.getItem('votes')) || {};
+
+  voteButtons.forEach((button, index) => {
+    if (savedVotes[index]) {
+      button.classList.add('voted');
+      button.textContent = 'Vote Placed';
+
+      cards.forEach((card, cardIndex) => {
+        if (cardIndex !== index) {
+          card.classList.add('card-disabled');
+        }
+      });
+    }
+  });
+});
+
+voteButtons.forEach((button, index) => {
+  button.addEventListener('click', function () {
+    let savedVotes = JSON.parse(localStorage.getItem('votes')) || {};
+
+    if (this.classList.contains('voted')) {
+      this.classList.remove('voted');
+      this.textContent = 'Vote';
+
+      cards.forEach(card => card.classList.remove('card-disabled'));
+
+      delete savedVotes[index];
+    } else {
+      this.classList.add('voted');
+      this.textContent = 'Vote Placed';
+
+      cards.forEach((card, cardIndex) => {
+        if (cardIndex !== index) {
+          card.classList.add('card-disabled');
+        }
+      });
+
+      savedVotes[index] = true;
+    }
+
+    localStorage.setItem('votes', JSON.stringify(savedVotes));
+  });
 });
