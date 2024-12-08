@@ -7,7 +7,7 @@
 
 .voting-section .title h1 {
     font-size: 36px;
-    color: #ffa500; /* 橙色标题 */
+    color: #ffa500;
     margin-bottom: 10px;
 }
 
@@ -37,11 +37,6 @@
     margin: 0 10px;
   }
 
-.card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-  }
-
 .card::before {
     content: '';
     position: absolute;
@@ -50,9 +45,9 @@
     padding: 3px;
     background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000);
     background-size: 300% 300%;
-    opacity: 0; /* 初始状态隐藏边框 */
-    transition: opacity 0.3s ease; /* 添加过渡效果 */
-    animation: borderRotate 4s linear infinite paused; /* 默认暂停动画 */
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    animation: borderRotate 4s linear infinite paused;
     -webkit-mask: 
       linear-gradient(#000 0 0) content-box, 
       linear-gradient(#000 0 0);
@@ -60,33 +55,44 @@
     mask-composite: exclude;
   }
 
+  .card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .card:hover, .card:hover-effect{
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    animation-play-state: running;
+  }
+
 .card:hover::before {
-    opacity: 1; /* 鼠标悬停时显示边框 */
-    animation-play-state: running; /* 鼠标悬停时启动动画 */
+    opacity: 1;
+    animation-play-state: running; 
   }
 
 .card-image_1 {
     width: 100%;
     height: 300px;
-    background: url('../images/vote_KaBi.jpg') no-repeat center/cover; /* 替换为你的图片路径 */
+    background: url('../images/vote_KaBi.jpg') no-repeat center/cover;
   }
 
 .card-image_2 {
     width: 100%;
     height: 300px;
-    background: url('../images/vote_Mariao.png') no-repeat center/cover; /* 替换为你的图片路径 */
+    background: url('../images/vote_Mariao.png') no-repeat center/cover; 
   }
 
 .card-image_3 {
     width: 100%;
     height: 300px;
-    background: url('../images/vote_splatoon.png') no-repeat center/cover; /* 替换为你的图片路径 */
+    background: url('../images/vote_splatoon.png') no-repeat center/cover;
   }
 
 .card-image_4 {
     width: 100%;
     height: 300px;
-    background: url('../images/vote_Zelda.png') no-repeat center/cover; /* 替换为你的图片路径 */
+    background: url('../images/vote_Zelda.png') no-repeat center/cover;
   }
 
 .card-content {
@@ -112,10 +118,40 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease; /* 添加过渡效果 */
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
   }
+
+  /* vote placed Start */
+  .vote-button.voted{
+    background: #cc6600;
+    color: white;
+    animation: scaleUp 0.3s ease-in-out;
+  }
+
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-disabled {
+  opacity: 0.5; 
+  pointer-events: none; 
+  filter: grayscale(100%);
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+
+  /* vote placed end */
 
   .vote-button::before {
     content: '';
@@ -124,17 +160,17 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.3); /* 浅色光晕效果 */
+    background: rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
   }
 
   .vote-button:hover {
-    background: #ff7700; /* 悬停时背景变暗 */
-    transform: scale(1.05); /* 悬停时按钮放大 */
+    background: #ff7700;
+    transform: scale(1.05);
   }
 
   .vote-button:hover::before {
-    left: 0; /* 光晕从左到右移动 */
+    left: 0;
     transition: all 0.3s ease;
   }
 
